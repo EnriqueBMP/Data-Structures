@@ -1,0 +1,12 @@
+The key to understanding the solution to the problem is to define the boundaries of the matrix, for that we use four variables:
+(top, bottom, left, right) define the current boundaries of the spiral traversal:
+    top: index of the topmost row.
+    bottom: index of the bottommost row.
+    left: index of the leftmost column column.
+    right: index of the rightmost column.
+We will use this variables to print the matrix in an spiral: 
+    The main loop continues as long as the boundaries are valid (top <= bottom && left <= right).
+    Traverse from Left to Right: Print the top row from left to right, then increment top.
+    Traverse from Top to Bottom: Print the rightmost column from top to bottom, then decrement right.
+    Traverse from Right to Left: If rows remain, print the bottom row from right to left, then decrement bottom.
+    Traverse from Bottom to Top: If columns remain, print the leftmost column from bottom to top, then increment left.
